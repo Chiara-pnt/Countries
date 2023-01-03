@@ -1,13 +1,466 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Typography
+
+### Body Copy
+
+- Homepage Items: 14px
+- Detail Page: 16px 
+
+### Fonts
+
+- Family: [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans)
+- Weights: 300, 600, 800
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+  /* (Dark Mode Elements) */
+  --DarkBlue: hsl(209, 23%, 22%);
+  --VeryDarkBlue: hsl(207, 26%, 17%);
+
+  /* (Light Mode Text) */
+  --VeryDarkBlue: hsl(200, 15%, 8%);
+  /* (Light Mode Input) */
+  --DarkGray: hsl(0, 0%, 52%);
+  /* (Light Mode Background) */
+  --VeryLightGray: hsl(0, 0%, 98%);
+  /* (Dark Mode Text & Light Mode Elements) */
+  --White: hsl(0, 0%, 100%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.home {
+  background-color: var(--VeryLightGray);
+  width: 98.7vw;
+}
+
+.home-dark {
+  background-color: var(--VeryDarkBlue);
+  width: 98.7vw;
+}
+
+.nav {
+  background-color: var(--White);
+  display: flex;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-dark {
+  background-color: var(--DarkBlue);
+  display: flex;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 1);
+}
+
+.header {
+  padding: 20px;
+  font-weight: 800;
+  margin-left: 30px;
+}
+
+.header-dark {
+  color: var(--White);
+  padding: 20px;
+  font-weight: 800;
+  margin-left: 30px;
+}
+
+.mode {
+  display: flex;
+  padding: 17px;
+  margin: auto;
+  margin-right: 5%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mode-dark {
+  display: flex;
+  padding: 17px;
+  margin: auto;
+  margin-right: 5%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.mode p {
+  padding: 0 5px;
+  font-size: 16px;
+}
+
+.mode-dark p {
+  padding: 0 5px;
+  font-size: 16px;
+}
+
+.mode svg {
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+.mode-dark svg {
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+.searchbar {
+  display: flex;
+  margin: 40px 0 0 55px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.03);
+  width: 30%;
+  border-radius: 15px;
+}
+
+.searchbar-dark {
+  display: flex;
+  margin: 40px 0 0 55px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 1);
+  width: 30%;
+  border-radius: 15px;
+  color: var(--White);
+}
+
+.input {
+  border: none;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 0 15px 15px 0;
+  width: 100%;
+  color: var(--DarkGray);
+}
+
+.input-dark {
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 0 15px 15px 0;
+  width: 100%;
+
+  background: var(--DarkBlue);
+}
+
+.input-dark::placeholder {
+  color: var(--White);
+  opacity: 0.6;
+}
+
+.searchbar svg {
+  color: var(--DarkGray);
+  padding: 18px;
+  padding-right: 5px;
+  background-color: var(--White);
+  font-size: 25px;
+  border-radius: 15px 0 0 15px;
+}
+
+.searchbar-dark svg {
+  color: var(--White);
+  padding: 18px;
+  padding-right: 5px;
+  background-color: var(--DarkBlue);
+  font-size: 25px;
+  border-radius: 15px 0 0 15px;
+}
+
+.inputs {
+  display: flex;
+}
+
+.cards {
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 60px;
+  grid-column-gap: 0px;
+  margin-top: 90px;
+  text-align: center;
+}
+
+.card {
+  cursor: pointer;
+  background-color: var(--White);
+  width: 85%;
+  margin: auto;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-dark {
+  cursor: pointer;
+  background-color: var(--DarkBlue);
+  color: var(--White);
+  width: 85%;
+  margin: auto;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-dark img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.card-info {
+  display: flex;
+  font-size: 14px;
+  text-align: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.card-data {
+  margin: auto;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backbutton {
+  background-color: var(--White);
+  margin: 60px 40px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+  padding: 7px;
+  width: 90px;
+  display: flex;
+  color: black;
+}
+
+.backbutton-dark {
+  background-color: var(--DarkBlue);
+  color: var(--White);
+  margin: 60px 40px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 1);
+  padding: 7px;
+  width: 90px;
+  display: flex;
+}
+
+.backbutton-dark svg {
+  text-align: center;
+  font-size: 18px;
+  margin: 1px 10px 0 0;
+  color: var(--White);
+  float: left;
+}
+
+.backbutton svg {
+  text-align: center;
+  font-size: 18px;
+  margin: 1px 10px 0 0;
+
+  float: left;
+}
+
+.backbutton a {
+  margin: 5px;
+}
+
+.backbutton-dark a {
+  margin: 5px;
+  color: var(--White);
+  opacity: 0.6;
+}
+
+.detailpage {
+  height: 100vh;
+}
+
+.details {
+  margin: auto;
+}
+
+.flag {
+  width: 40%;
+  margin-left: 6%;
+  margin-right: 9%;
+  float: left;
+}
+
+.details-columns {
+  display: flex;
+  margin-right: 20%;
+}
+
+.link {
+  margin: 0 5px;
+  border: 1px solid var(--DarkGray);
+  padding: 0 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.link-dark {
+  margin: 0 5px;
+  border: 1px solid var(--White);
+  padding: 0 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  color: var(--White);
+}
+
+.link:hover {
+  background-color: var(--DarkBlue);
+  color: var(--White);
+}
+
+.link-dark:hover {
+  color: black;
+  background-color: cadetblue;
+}
+
+.data {
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.dropdown {
+  margin: auto;
+  padding: 20px;
+  margin-right: 7%;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.dropdown-dark {
+  margin: auto;
+  padding: 20px;
+  margin-right: 7%;
+  margin-top: 40px;
+  color: var(--White);
+  cursor: pointer;
+}
+
+.dropdown svg {
+  font-size: 10px;
+}
+
+.dropdown-dark svg {
+  font-size: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.dropdown-list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--White);
+  width: 200px;
+  right: 3%;
+  top: 19%;
+}
+
+.dropdown-item {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.dropdown-item-dark {
+  width: 100%;
+  border: none;
+  background-color: var(--DarkBlue);
+  color: var(--White);
+  font-size: 16px;
+  margin: auto;
+  padding: 5px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(42, 49, 68, 0.59);
+  color: var(--White);
+}
+
+.dropdown-item-dark:hover {
+  background-color: rgba(42, 49, 68, 0.59);
+  color: var(--White);
+}
+
+.detailpage-dark {
+  background-color: var(--VeryDarkBlue);
+  color: var(--White);
+  height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+  .details {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-row-gap: 30px;
+  }
+
+  .searchbar {
+    width: 60%;
+  }
+
+  .card {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    grid-row-gap: 30px;
+  }
+
+  .searchbar {
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+  }
+
+  .inputs {
+    display: block;
+  }
+
+  .card {
+    height: 450px;
+  }
 }
