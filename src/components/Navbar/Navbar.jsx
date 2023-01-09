@@ -1,7 +1,8 @@
 import React from "react";
+import "./navbar.css";
 import { TbMoon, TbSun } from "react-icons/tb";
 
-import { useStateContext } from "../context/ContextProvider";
+import { useStateContext } from "../../context/ContextProvider";
 
 const Navbar = () => {
   const { handleTheme, dark } = useStateContext();

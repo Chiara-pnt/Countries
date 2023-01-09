@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { useStateContext } from "../context/ContextProvider";
+import { useStateContext } from "../../context/ContextProvider";
+import "./card.css";
 
 const Card = ({ countries, query }) => {
   const { dark } = useStateContext();
@@ -26,7 +27,7 @@ const Card = ({ countries, query }) => {
             <div className="card-info">
               Population:
               <p style={{ marginLeft: "5px", fontWeight: "300" }}>
-                {item.population}
+                {new Intl.NumberFormat().format(item.population)}
               </p>
             </div>
 

@@ -1,10 +1,12 @@
 import { BiSearch } from "react-icons/bi";
-import { useStateContext } from "../context/ContextProvider";
+import { useStateContext } from "../../context/ContextProvider";
+import "./searchbar.css";
 
 const Searchbar = ({ query, setQuery }) => {
   const { dark } = useStateContext();
+
   const handleChange = (e) => {
-    setQuery(e.target.value);
+    setQuery(e.target.value.toLowerCase());
   };
 
   return (

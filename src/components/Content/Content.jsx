@@ -1,9 +1,8 @@
 import React from "react";
-import { useStateContext } from "../context/ContextProvider";
 import { useAsyncValue, Link } from "react-router-dom";
+import "./content.css";
 
-const Content = () => {
-  const { dark } = useStateContext();
+const Content = ({ borders }) => {
   const { data } = useAsyncValue();
 
   return (
@@ -18,14 +17,16 @@ const Content = () => {
             <div style={{ fontWeight: "800", display: "flex", width: "100%" }}>
               Native Names:
               {Object.values(data[0].name.nativeName).map((nameObj) => (
-                <p className="data"> {nameObj.common},</p>
+                <p className="data"> {nameObj.common}</p>
               ))}
             </div>
           </div>
 
           <div style={{ display: "flex", marginTop: "10px" }}>
             <h4 className="titles">Population:</h4>
-            <p className="data">{data[0].population}</p>
+            <p className="data">
+              {new Intl.NumberFormat().format(data[0].population)}
+            </p>
           </div>
           <div style={{ display: "flex", marginTop: "10px" }}>
             <h4 className="titles">Region:</h4>
@@ -49,32 +50,46 @@ const Content = () => {
           <div style={{ display: "flex", marginTop: "10px" }}>
             <h4 className="titles">Currencies:</h4>
             <p className="data">
-              {Object.values(data[0].currencies).map(
-                (currencyObj) => currencyObj.name
-              )}
+              {Object.values(data[0].currencies).map((currency) => (
+                <span key={currency.name}>{currency.name}</span>
+              ))}
             </p>
           </div>
           <div style={{ display: "flex", marginTop: "10px" }}>
             <h4 className="titles">Languages:</h4>
-            <p className="data">
-              {Object.values(data[0].languages).map((langObj) => langObj)}
+            <p>
+              {Object.values(data[0].languages).map((langObj) => (
+                <p className="data"> {langObj} </p>
+              ))}
             </p>
           </div>
         </div>
       </div>
 
       <div style={{ display: "flex", marginTop: "50px" }}>
-        <h4 className="titles">Border Countries:</h4>
-        <p className="data">
-          {data[0].borders.map((item) => (
-            <Link
-              className={dark ? "link-dark" : "link"}
-              to={`/countries/${item}`}
-            >
-              {[...item]}
-            </Link>
-          ))}
-        </p>
+        {data[0].borders ? (
+          <>
+            <h4>Border Countries:</h4>
+            <span>
+              {borders
+                .filter((countryCode) =>
+                  data[0].borders?.includes(countryCode.code)
+                )
+                .map((countryCode) => {
+                  return (
+                    <Link
+                      className="link"
+                      to={"/countries/" + countryCode.name}
+                    >
+                      {countryCode.name}
+                    </Link>
+                  );
+                })}
+            </span>
+          </>
+        ) : (
+          ""
+        )}
       </div>
     </>
   );

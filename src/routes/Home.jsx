@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Searchbar from "../components/Searchbar";
-import Dropdown from "../components/Dropdown";
-import Card from "../components/Card";
+import Searchbar from "../components/Searchbar/Searchbar";
+import Dropdown from "../components/Dropdown/Dropdown";
+import Card from "../components/Card/Card";
 import axios from "axios";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import { useStateContext } from "../context/ContextProvider";
 
 const Home = () => {

@@ -1,0 +1,45 @@
+.card {
+  cursor: pointer;
+  background-color: var(--White);
+  width: 85%;
+  margin: auto;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-dark {
+  cursor: pointer;
+  background-color: var(--DarkBlue);
+  color: var(--White);
+  width: 85%;
+  margin: auto;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-dark img {
+  width: 100%;
+  height: 100%;
+}
+.card-info {
+  display: flex;
+  font-size: 14px;
+  text-align: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.card-data {
+  margin: auto;
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

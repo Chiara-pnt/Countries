@@ -1,0 +1,64 @@
+.nav {
+  background-color: var(--White);
+  display: flex;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-dark {
+  background-color: var(--DarkBlue);
+  display: flex;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 1);
+}
+.header {
+  padding: 20px;
+  font-weight: 800;
+  margin-left: 30px;
+}
+
+.header-dark {
+  color: var(--White);
+  padding: 20px;
+  font-weight: 800;
+  margin-left: 30px;
+}
+
+.mode {
+  display: flex;
+  padding: 17px;
+  margin: auto;
+  margin-right: 5%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mode-dark {
+  display: flex;
+  padding: 17px;
+  margin: auto;
+  margin-right: 5%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+}
+
+.mode p {
+  padding: 0 5px;
+  font-size: 16px;
+}
+
+.mode-dark p {
+  padding: 0 5px;
+  font-size: 16px;
+}
+
+.mode svg {
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+.mode-dark svg {
+  font-size: 20px;
+  padding: 0 5px;
+}

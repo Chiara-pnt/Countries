@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import Home from "./routes/Home";
+import Error from "./routes/Error";
 import DetailPage from "./routes/DetailPage";
 import axios from "axios";
 
@@ -28,7 +29,7 @@ const router = createBrowserRouter(
           console.log(data);
           return defer({ data });
         }}
-        errorElement={<div>Error</div>}
+        errorElement={<Error />}
       />
     </Route>
   )

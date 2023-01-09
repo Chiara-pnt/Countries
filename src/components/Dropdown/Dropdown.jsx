@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import "./dropdown.css";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
-import { useStateContext } from "../context/ContextProvider";
+import { useStateContext } from "../../context/ContextProvider";
 
 const Dropdown = ({ setRegion }) => {
   const { dark } = useStateContext();
