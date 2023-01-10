@@ -10,7 +10,6 @@
 
 .backbutton-dark {
   background-color: var(--DarkBlue);
-  color: var(--White);
   margin: 60px 40px;
   box-shadow: 0 3px 4px rgba(0, 0, 0, 1);
   padding: 7px;
@@ -22,7 +21,6 @@
   text-align: center;
   font-size: 18px;
   margin: 1px 10px 0 0;
-  color: var(--White);
   float: left;
 }
 
@@ -42,4 +40,9 @@
   margin: 5px;
   color: var(--White);
   opacity: 0.6;
+  transition: ease-in-out 0.2s;
+}
+
+.backbutton-dark a:hover {
+  opacity: 1;
 }

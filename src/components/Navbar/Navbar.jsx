@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className={dark ? "nav-dark" : "nav"}>
-      <h2 className={dark ? "header-dark" : "header "}>Wehre in the world?</h2>
+      <h2 className={dark ? "header-dark" : "header "}>Where in the world?</h2>
       <button className={dark ? "mode-dark" : "mode"} onClick={handleTheme}>
         {dark ? (
           <>

@@ -4,6 +4,11 @@
   margin-right: 7%;
   margin-top: 40px;
   cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.dropdown:hover {
+  font-weight: 600;
 }
 
 .dropdown-dark {
@@ -12,7 +17,13 @@
   margin-right: 7%;
   margin-top: 40px;
   color: var(--White);
+  opacity: 0.6;
+  transition: ease-in-out 0.2s;
   cursor: pointer;
+}
+
+.dropdown-dark:hover {
+  opacity: 1;
 }
 
 .dropdown svg {

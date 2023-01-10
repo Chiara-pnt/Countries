@@ -28,7 +28,9 @@
 
 .home-dark {
   background-color: var(--VeryDarkBlue);
-  width: 98.7vw;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .inputs {
@@ -72,12 +74,13 @@ a {
     grid-row-gap: 30px;
   }
 
-  .searchbar {
-    width: 60%;
-  }
-
   .card {
     height: 350px;
+  }
+
+  .inputs {
+    display: block;
+    width: auto;
   }
 }
 
@@ -87,16 +90,6 @@ a {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
     grid-row-gap: 30px;
-  }
-
-  .searchbar {
-    width: 90%;
-    margin: auto;
-    margin-top: 60px;
-  }
-
-  .inputs {
-    display: block;
   }
 
   .card {

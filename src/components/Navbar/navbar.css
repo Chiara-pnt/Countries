@@ -24,12 +24,19 @@
 
 .mode {
   display: flex;
+  font-size: 14px;
   padding: 17px;
   margin: auto;
   margin-right: 5%;
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+
+.mode:hover {
+  font-size: 14.5px;
+  font-weight: 600;
 }
 
 .mode-dark {
@@ -41,6 +48,12 @@
   background-color: transparent;
   cursor: pointer;
   color: white;
+  opacity: 0.6;
+  transition: ease-in-out 0.2s;
+}
+
+.mode-dark:hover {
+  opacity: 1;
 }
 
 .mode p {

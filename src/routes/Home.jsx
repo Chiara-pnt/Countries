@@ -36,7 +36,7 @@ const Home = () => {
     <div className={dark ? "home-dark" : "home"}>
       <Navbar />
       <div className="inputs">
-        <Searchbar query={query} setQuery={setQuery} />
+        <Searchbar setQuery={setQuery} />
         <Dropdown setRegion={setRegion} />
       </div>
       <Card countries={countries} query={query} />
