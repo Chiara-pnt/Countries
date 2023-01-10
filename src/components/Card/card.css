@@ -19,9 +19,9 @@
   flex-direction: column;
 }
 
-.card img {
+.flag-main {
   width: 100%;
-  height: 100%;
+  height: 200px;
 }
 
 .card-dark img {
@@ -37,9 +37,14 @@
 }
 
 .card-data {
-  margin: auto;
-  margin-top: 15%;
+  margin: 15% auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 370px) {
+  .card-data {
+    margin: 15% 10px;
+  }
 }

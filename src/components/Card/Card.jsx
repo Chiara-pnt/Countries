@@ -17,7 +17,7 @@ const Card = ({ countries, query }) => {
     <Link to={`/countries/${item.name.common}`}>
       <div className={dark ? "card-dark" : "card"}>
         <div style={{ width: "100%" }}>
-          <img alt={item.cca2} src={item.flags.png} />
+          <img className="flag-main" alt={item.cca2} src={item.flags.png} />
         </div>
 
         <div style={{ textAlign: "center", marginTop: "11%" }}>
