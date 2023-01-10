@@ -6,7 +6,7 @@ const Searchbar = ({ query, setQuery }) => {
   const { dark } = useStateContext();
 
   const handleChange = (e) => {
-    setQuery(e.target.value.toLowerCase());
+    setTimeout(() => setQuery(e.target.value.toLowerCase()), 500);
   };
 
   return (
@@ -16,7 +16,6 @@ const Searchbar = ({ query, setQuery }) => {
         className={dark ? "input-dark" : "input"}
         type="text"
         placeholder="Search for a country..."
-        value={query}
         onChange={handleChange}
       ></input>
     </div>
