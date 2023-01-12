@@ -16,9 +16,7 @@ const Card = ({ countries, query }) => {
   const card = filteredList.map((item) => (
     <Link to={`/countries/${item.name.common}`}>
       <div className={dark ? "card-dark" : "card"}>
-        <div style={{ width: "100%" }}>
-          <img className="flag-main" alt={item.cca2} src={item.flags.png} />
-        </div>
+        <img className="flag-main" alt={item.cca2} src={item.flags.png} />
 
         <div style={{ textAlign: "center", marginTop: "11%" }}>
           <h3>{item.name.common}</h3>

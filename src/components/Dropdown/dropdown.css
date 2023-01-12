@@ -5,6 +5,7 @@
   margin-top: 40px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
+  position: relative;
 }
 
 .dropdown:hover {
@@ -20,6 +21,7 @@
   opacity: 0.6;
   transition: ease-in-out 0.2s;
   cursor: pointer;
+  position: relative;
 }
 
 .dropdown-dark:hover {
@@ -44,8 +46,15 @@
   position: absolute;
   background-color: var(--White);
   width: 200px;
-  right: 3%;
-  top: 19%;
+  left: -50%;
+  top: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .dropdown-list {
+    left: 0;
+    top: 100%;
+  }
 }
 
 .dropdown-item {
